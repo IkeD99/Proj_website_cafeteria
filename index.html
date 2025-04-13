@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <title>Cofeencode</title>
 </head>
 
@@ -14,44 +19,62 @@
         <div class="mask"></div>
     </div>
 
-    <header>
+    <header class="header">
         <section>
             <a href="#">
                 <img src="./img/logo.png" alt="logo-coffee">
             </a>
-            
+
             <nav>
                 <a href="#">Home</a>
                 <a href="#">About</a>
-                <a href="#">Adress</a>
+                <a id="address" href="#" onclick="showModal()">Address</a>
                 <a href="#">Contact</a>
             </nav>
         </section>
     </header>
 
-    <div>
-        <section>
-            <div>
-                <h3>Code com o Melhor Café da Região!</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium perspiciatis odio veniam quis consequatur temporibus commodi hic atque magni eius consectetur, voluptatibus ut animi alias placeat earum, libero, incidunt provident.</p>
-                <a href="#">Conheça nossos produtos</a>
-            </div>
-        </section>
-    </div>
 
-    <section>
-        <h2><span>About</span> Us</h2>
+    <section class="box-banner">
         <div>
-            <div>
+            <h3>Code com o Melhor Café da Região!</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium perspiciatis odio veniam quis
+                consequatur temporibus commodi hic atque magni eius consectetur, voluptatibus ut animi alias placeat
+                earum, libero, incidunt provident.</p>
+            <a href="#" class="btn-link">Conheça nossos produtos</a>
+        </div>
+    </section>
+
+
+    <section class="box-about">
+        <h2 class="title"><span>About</span> Us</h2>
+        <div class="about-container">
+            <div class="about-img">
                 <img src="./img/about-img.jpg" alt="">
             </div>
-            <div>
+            <div class="about-text">
                 <h3>O que fáz nosso café especial</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem perferendis eius, vel et soluta blanditiis amet minus consequatur ratione rem ducimus, ea officiis impedit est recusandae labore? Quibusdam, placeat quis!</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, at hic, dolores eaque quas laboriosam cumque eligendi, corrupti iusto doloremque mollitia nesciunt voluptatibus suscipit vel. Nobis itaque expedita dicta dolores.</p>
-                <a href="#">Read More</a>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem perferendis eius, vel et soluta
+                    blanditiis amet minus consequatur ratione rem ducimus, ea officiis impedit est recusandae labore?
+                    Quibusdam, placeat quis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque, at hic, dolores eaque quas
+                    laboriosam cumque eligendi, corrupti iusto doloremque mollitia nesciunt voluptatibus suscipit vel.
+                    Nobis itaque expedita dicta dolores.</p>
+                <a href="#" class="btn-link">Read More</a>
             </div>
         </div>
     </section>
+
+    <div id="modal" class="modal">
+        <h3 class="title-h3"><span>Nosso</span> Endereço</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.3957421404!2d-46.92496751844608!3d-23.681434558740936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20SP%2C%20Brasil!5e0!3m2!1spt-PT!2spt!4v1744578867633!5m2!1spt-PT!2spt"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="modal-mask" onclick="closeModal()"></div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

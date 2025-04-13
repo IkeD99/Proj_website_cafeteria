@@ -2,10 +2,209 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+:root{
+    font-size: 10px;
+    --main-color: #d3ad7f;
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+.box-video {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.box-video video {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: var(--bg);
+    width: 100vw;
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.5rem 0;
+    position: relative;
+}
+
+.header section a img{
+    height: 6rem;
+}
+
+.header section nav a{
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: 0.2s linear;
+}
+
+.header section nav a:hover{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.box-banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.box-banner div {
+    max-width: 60rem;
+}
+
+.box-banner div h3 {
+    font-size: 5.5rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.box-banner div p {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1rem 0;
+    line-height: 1.4;
+}
+
+.btn-link {
+    background: var(--main-color);
+    cursor: pointer;
+    margin-top: 2rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: var(--black);
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 10px;
+    transition: 0.18s linear;
+}
+
+.btn-link:hover {
+    background: var(--black);
+    color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+
+.title{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.title span{
+    color: var(--main-color);
+}
+
+.box-about .about-container{
+    display: flex;
+    align-items: center;
+    background: var(--black);
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box-about .about-container .about-img{
+    flex: 1 1 45rem;
+}
+
+.box-about .about-container .about-img img{
+    width: 100%;
+}
+
+.box-about .about-container .about-text{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.box-about .about-container .about-text h3{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.box-about .about-container .about-text p{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 1.8rem;
+    padding: 1rem 0;
+}
+
+#modal {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 1rem;
+    z-index: 4;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -45%);
+    transition: 0.3s ease-in-out;
+}
+
+.modal iframe {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.title-h3 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.title-h3 span {
+    color: var(--main-color);
+}
+
+.modal-mask {
+    visibility: hidden;
+    z-index: 3;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: 0.2s ease-in-out;
 }
